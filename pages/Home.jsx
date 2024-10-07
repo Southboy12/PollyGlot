@@ -42,7 +42,7 @@ export default function Home() {
         try {
             const openai = new OpenAI({
                 apiKey: openApiKey,
-                dangerouslyAllowBrowser: true
+                dangerouslyAllowBrowser: false
             })
             const response = await openai.chat.completions.create({
                 model: "gpt-4",
